@@ -1,0 +1,310 @@
+/* Font families */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Prism&display=swap');
+
+:root {
+  --amarillo: #feef98;
+  --verde: #004225;
+  --bordo: #8c1d40;
+  --blanco: #ffffff;
+}
+
+body {
+  background: linear-gradient(45deg, #a37906, #9e6b0b 33%, #9e6b0b 33%, #9e590b 66%, #a15b0b 66%);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font: 16px/1.5 "Montserrat", sans-serif;
+  color: var(--verde);
+}
+
+body:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+header {
+  background-color: var(--amarillo);
+  color: var(--verde);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font: 2.5rem/1 'Tilt Prism', serif;
+}
+
+header img {
+  max-width: 40px;
+  height: auto;
+  margin: 0 15px;
+}
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+main {
+  background: url(/Restaurante/Assets/Img/fondo1.webp) center/cover;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+
+section {
+  background-color: var(--blanco);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+section img {
+  width: 100%;
+  height: auto;
+}
+
+.section-title {
+  margin-top: 0;
+  font: 1.5rem/1 "Cormorant Garamond", serif;
+  color: var(--verde);
+}
+
+.slideshow-slide {
+  position: relative;
+}
+
+.slideshow-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px;
+}
+  .slideshow-container:hover .slideshow-caption {
+    opacity: 1;
+  }
+  
+  .slideshow-caption h3, .slideshow-caption p {
+  margin: 0.5rem 0;
+  }
+.section-content {
+  font: 1rem/1.5 "Montserrat", sans-serif;
+  color: var(--verde);
+}
+
+aside {
+  background-color: var(--amarillo);
+  color: var(--verde);
+  padding: 2rem;
+  text-align: center;
+}
+
+.aside-title {
+  font: 1.5rem/1 "Cormorant Garamond", serif;
+  margin-top: 0;
+}
+
+.aside-content {
+  font: 1rem/1.5 "Montserrat", sans-serif;
+  margin-bottom: 0;
+}
+
+footer {
+  background-color: grey;
+  color: var(--blanco);
+  border: 3px solid var(--verde);
+  border-radius: 4%;
+  padding: 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+}
+
+form {
+  padding-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px black double;
+}
+
+
+
+/* Responsive design */
+
+@media screen and (max-width: 768px) {
+    body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    font-size: 14px;
+    }
+    
+    main {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+    }
+    
+    section {
+    padding: 1rem;
+    }
+    
+    aside {
+    padding: 1rem;
+    }
+    
+    nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    }
+    
+    nav li {
+    margin: 0.5rem 0;
+    }
+    
+    header {
+    flex-direction: column;
+    text-align: center;
+    font-size: 2rem;
+    }
+    
+    img {
+    max-width: 30px;
+    margin: 0px 10px;
+    }
+    
+    #ubicacion {
+    height: 400px;
+    }
+    
+    section h2 {
+    font-size: 1.2rem;
+    }
+    
+    section p {
+    font-size: 0.8rem;
+    }
+    
+    aside h2 {
+    font-size: 1.2rem;
+    }
+    
+    aside p {
+    font-size: 0.8rem;
+    }
+    }
+
+    
+.sections {
+  opacity: 0.8;
+  background-color: darkgray;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#ubicacion {
+  height: 530px;
+    
+}
+
+ /* Animación para la sección */
+ #nuestros-platos {
+  animation: slidein 1s ease-in-out;
+  opacity: 0.9;
+}
+
+/* Estilos para el carrusel */
+.slideshow-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 400px;
+}
+
+.slideshow-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slideshow-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slideshow-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  opacity: 1;
+}
+
+/* Estilos para los botones de navegación */
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  z-index: 1;
+}
+
+.prev {
+  left: 2px;
+}
+
+.next {
+  right: 4px;
+ 
+}
+
+/* Estilos para la animación de los botones de navegación */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+
+
+.prev:focus, .next:focus {
+  outline: none;
+}
+
+/* Estilo para las diapositivas activas */
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  z-index: -1
+}
+
